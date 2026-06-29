@@ -1,0 +1,4 @@
+project_id = "asset_management"
+
+[functions.api]
+verify_jwt = false
