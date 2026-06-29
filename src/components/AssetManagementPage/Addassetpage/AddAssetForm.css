@@ -1,0 +1,91 @@
+/* Same style as AddAssetTypeForm.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+
+.asset-form-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.asset-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.asset-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.asset-back-button {
+  padding: 6px;
+}
+
+.asset-back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon,
+.submit-icon {
+  width: 16px;
+  height: 16px;
+  font-size: 20;
+}
+
+.asset-header-title {
+  margin: 0;
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
+.asset-submit-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  height: auto;
+  font-size: 16px !important;
+}
+
+.submit-icon {
+  filter: brightness(0) invert(1);
+}
+
+.asset-section {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.asset-section-title {
+  margin-bottom: 16px;
+  font-size: 15px !important;
+  font-weight: 600;
+}
+
+.asset-label {
+  font-size: 13px !important;
+  color: #333;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.asset-input,
+.asset-select {
+  width: 100%;
+  min-height: 38px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}

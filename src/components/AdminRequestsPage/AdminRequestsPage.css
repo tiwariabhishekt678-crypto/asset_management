@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+.admin-requests-container {
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.top-header-row {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.custom-search-input {
+    border: 1px solid #BEBEBE;
+    border-radius: 6px;
+}
+
+.custom-search-input input::placeholder {
+    color: #484848;
+}
+
+.btn-edit-columns {
+    background: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-edit-columns:hover {
+    border-color: #9ca3af;
+    color: #111827;
+}
+
+.asset-table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.ant-table-thead > tr > th {
+    background: #3184C5 !important;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 16px !important;
+}
+
+.ant-table-tbody > tr > td {
+    padding: 12px 16px !important;
+    font-size: 13px;
+    color: #374151;
+}
+
+.ant-tabs-tab {
+    font-weight: 500;
+    color: #6b7280;
+    padding: 8px 16px;
+}
+
+.ant-tabs-tab-active {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.ant-tabs-ink-bar {
+    background: #2563eb;
+}
+
+.action-btn-blue {
+    color: #1890ff;
+}
+
+.action-btn-green {
+    color: #52c41a;
+}
+
+.action-btn-red {
+    color: #ff4d4f;
+}
+
+.action-btn-blue:hover,
+.action-btn-green:hover,
+.action-btn-red:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .top-header-row {
+        padding: 12px;
+    }
+    
+    .header-title {
+        font-size: 20px;
+    }
+}

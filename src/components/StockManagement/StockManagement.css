@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
+.stock-management-container {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.top-header-row {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.summary-cards {
+  margin-bottom: 16px;
+}
+
+.summary-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  background: white;
+}
+
+.summary-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filters-row {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Input Styling */
+.search-input .ant-input {
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  font-size: 13px;
+  height: auto;
+  background: white;
+}
+
+.search-input .ant-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Button Styling */
+.btn-new {
+  background: #2563eb;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Tabs Styling */
+.ant-tabs-tab {
+  font-weight: 500;
+  color: #6b7280;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.ant-tabs-tab-active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.ant-tabs-ink-bar {
+  background: #2563eb;
+}
+
+/* Table Styling */
+.ant-table {
+  font-size: 13px;
+}
+
+.ant-table-thead > tr > th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  font-size: 12px;
+  padding: 12px 16px;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 12px 16px;
+  color: #1f2937;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f9fafb;
+}
+
+/* Tag Styling */
+.ant-tag {
+  font-weight: 500;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Statistic Styling */
+.ant-statistic-title {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.ant-statistic-content {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Modal Styling */
+.ant-modal-header {
+  border-radius: 8px 8px 0 0;
+  padding: 16px 24px;
+}
+
+.ant-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.ant-modal-body {
+  padding: 24px;
+}
+
+/* Form Input Styling */
+.ant-form-item-label > label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 13px;
+}
+
+.ant-input,
+.ant-select-selector,
+.ant-input-number {
+  border-radius: 6px !important;
+  border: 1px solid #e5e7eb !important;
+  font-size: 13px !important;
+  padding: 6px 10px !important;
+}
+
+.ant-input:focus,
+.ant-select-selector:focus,
+.ant-input-number:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stock-management-container {
+    padding: 12px;
+  }
+
+  .top-header-row {
+    padding: 12px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  .summary-cards .ant-col {
+    margin-bottom: 12px;
+  }
+}

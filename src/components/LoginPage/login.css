@@ -1,0 +1,346 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  background-color: #ffffff;
+}
+
+.ams-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Left Section */
+.ams-left-section {
+  width: 50%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.ams-logo {
+  max-width: 150px;
+  margin-left: 50px;
+  box-sizing: border-box;
+  position: relative;
+  top: 20px;
+}
+
+.ams-title {
+  font-size: 50px;
+  font-weight: 500;
+  color: #3184c5;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.ams-illustration {
+  max-width: 300px;
+  margin-top: auto;
+  margin: auto;
+}
+
+/* Right Section */
+.ams-right-section {
+  width: 50%;
+  background-color: #3184c5;
+  padding: 48px;
+}
+
+/* Login Card and Forgot Password Card Common Styles */
+.ams-login-card,
+.ams-forgot-password-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  margin: auto;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
+  font-family: 'Manrope', sans-serif;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Form Titles */
+.ams-login-title,
+.ams-form-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ams-forgot-password-form .ams-form-title {
+  color: #3184c5;
+  margin-bottom: 0px;
+}
+
+/* Form Content */
+.ams-login-form,
+.ams-forgot-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ams-forgot-password-form {
+  gap: 0px;
+}
+
+.ams-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ams-form-label {
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: 500;
+  color: #525252;
+}
+
+.ams-form-text {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #000;
+  text-align: center;
+}
+
+.ams-input-wrapper {
+  position: relative;
+}
+
+.ams-form-input {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  font-size: 16px;
+  border: 1px solid #00000026;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  outline: none;
+  color: #000000;
+}
+
+.ams-form-input::placeholder {
+  color: #00000061;
+}
+
+.ams-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.ams-eye-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.ams-form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ams-remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+.ams-remember-me input {
+  width: 14px;
+  height: 14px;
+  border: 1.27px solid #dddddd;
+  border-radius: 2.55px;
+}
+
+.ams-forgot-password,
+.ams-back-to-login {
+  font-size: 20px;
+  text-decoration: none;
+  color: #3184C5;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.ams-back-to-login span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.ams-forgot-password:hover,
+.ams-back-to-login:hover {
+  color: #3184c5;
+}
+
+.ams-login-button,
+.ams-submit-button {
+  background-color: #3184c5;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+}
+
+.ams-login-button:hover,
+.ams-submit-button:hover {
+  background-color: #256ba1;
+}
+
+/* Responsive Design */
+@media (max-width: 1250px) {
+  .ams-left-section,
+  .ams-right-section {
+    width: 100%;
+    padding: 0px 0px;
+    overflow-x: hidden;
+  }
+
+  .ams-title {
+    font-size: 40px;
+  }
+
+  .ams-illustration {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ams-left-section,
+  .ams-right-section {
+    width: 100%;
+    padding: 0px 0px;
+    overflow-x: hidden;
+  }
+
+  .ams-title {
+    font-size: 40px;
+  }
+
+  .ams-illustration {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ams-left-section,
+  .ams-right-section {
+    width: 100%;
+    padding: 0px 0px;
+    overflow-x: hidden;
+  }
+
+  .ams-container {
+    flex-direction: column;
+  }
+
+  .ams-title {
+    font-size: 32px;
+  }
+
+  .ams-login-card,
+  .ams-forgot-password-form {
+    padding: 30px 24px;
+    max-width: 80%;
+    border-radius: 4px;
+  }
+
+  .ams-login-title,
+  .ams-form-title {
+    font-size: 28px;
+    margin-bottom: 0px;
+    color: #fff;
+  }
+
+  .ams-form-input {
+    padding: 14px 14px 14px 40px;
+    font-size: 14px;
+  }
+
+  .ams-input-icon,
+  .ams-eye-icon {
+    font-size: 16px;
+  }
+
+  .ams-remember-me {
+    font-size: 12px;
+  }
+
+  .ams-forgot-password,
+  .ams-back-to-login {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ams-left-section,
+  .ams-right-section {
+    width: 100%;
+    padding: 0px 0px;
+    overflow-x: hidden;
+  }
+
+  .ams-logo {
+    max-width: 120px;
+  }
+
+  .ams-title {
+    font-size: 28px;
+  }
+
+  .ams-illustration {
+    max-width: 200px;
+  }
+
+  .ams-login-card,
+  .ams-forgot-password-form {
+    padding: 24px 16px;
+  }
+
+  .ams-login-title,
+  .ams-form-title {
+    font-size: 24px;
+    color: #fff;
+  }
+}
+
+/* Extra Utilities */
+.ams-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ams-forget-submit-btn {
+  margin: 30px 0;
+}
+
+.ams-change-password {
+  margin-bottom: 30px;
+}

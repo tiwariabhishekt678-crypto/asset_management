@@ -1,0 +1,161 @@
+/* Wrapper and Layout */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+
+* {
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+}
+
+.asset-type-form-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Header */
+.asset-type-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.asset-type-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.asset-type-back-button {
+  padding: 6px;
+}
+
+.asset-type-back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon,
+.submit-icon {
+  width: 16px;
+  height: 16px;
+  font-size: 20;
+}
+
+.asset-type-header-title {
+  margin: 0;
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
+.asset-type-preview-button,
+.asset-type-submit-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  height: auto;
+}
+
+.asset-type-submit-button {
+  font-size: 16px !important;
+}
+
+.submit-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Section */
+.asset-type-section {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.asset-type-section-title {
+  margin-bottom: 16px;
+  font-size: 15px !important;
+  font-weight: 600;
+}
+
+.asset-type-label {
+  font-size: 13px !important;
+  color: #333;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.asset-type-input,
+.asset-type-select,
+.asset-type-textarea {
+  width: 100%;
+  height: 38px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.asset-type-textarea {
+  height: auto;
+}
+
+/* Table */
+.asset-type-custom-table {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.asset-type-field-label {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.asset-type-icon-button {
+  padding: 2px 4px;
+}
+
+/* Add Field Button */
+.asset-type-add-field-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  height: auto;
+}
+
+/* Modal */
+.asset-type-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.asset-type-option-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.asset-type-add-option-button {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.asset-type-save-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

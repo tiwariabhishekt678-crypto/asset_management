@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+.user-management-container {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.asset-table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.ant-table {
+    font-size: 12px;
+    line-height: 1.2;
+    width: 100%;
+}
+
+.ant-table-thead>tr>th {
+    background: #3184C5 !important;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 6px 8px;
+    white-space: nowrap;
+}
+
+.ant-table-tbody>tr>td {
+    padding: 6px 8px;
+    font-size: 12px;
+    color: #374151;
+    white-space: nowrap;
+}
+
+.ant-table-tbody>tr:hover>td {
+    background: #f9fafb;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.tab-content {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+.top-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.header-search {
+    flex: 1;
+    max-width: 300px;
+    border: 1px solid #BEBEBE;
+    border-radius: 6px;
+}
+
+.header-search input {
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+.header-search input::placeholder {
+    color: #484848;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.header-buttons .ant-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.permissions-checkbox-group .ant-checkbox-wrapper {
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #2c2c3e;
+}
+
+.group-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3184C5;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 16px;
+    }
+
+    .top-header-row {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-actions {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .btn-new,
+    .btn-edit-columns {
+        width: 100%;
+        justify-content: center;
+    }
+}

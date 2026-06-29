@@ -1,0 +1,537 @@
+/* Import Manrope font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+/* Base styles */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1001;
+  background: #3184c5;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu-btn img {
+  height: 20px;
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* Desktop Sidebar */
+.desktop-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100vh;
+  border-right: 1px solid #d5d5d5;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+.desktop-sidebar.collapsed {
+  width: 80px;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.sidebar-content.collapsed {
+  padding: 10px 8px;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  min-height: 50px;
+}
+
+.logo-img {
+  height: 50px;
+  width: 82px;
+  transition: opacity 0.3s ease;
+}
+
+.collapse-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.collapse-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.collapse-icon {
+  height: 24px;
+  width: 24px;
+  transition: transform 0.3s ease;
+}
+
+.collapse-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.separator {
+  height: 1px;
+  background-color: #000000;
+  margin: 10px 0;
+  margin-top: 0;
+  transition: margin 0.3s ease;
+}
+
+.sidebar-content.collapsed .separator {
+  margin: 10px -8px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 8px;
+  color: #000000;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.menu-item:hover {
+  background-color: #f5f5f5;
+}
+
+.menu-item.active {
+  background-color: #3184c5;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.menu-item.collapsed-item {
+  justify-content: center;
+  padding: 12px 8px;
+  width: 48px;
+  margin: 0 auto 8px auto;
+}
+
+.menu-item .menu-icon-left {
+  height: 28px;
+  width: 28px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: margin 0.3s ease;
+}
+
+.menu-item.collapsed-item .menu-icon-left {
+  margin-right: 0;
+}
+
+.menu-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.3s ease;
+}
+
+/* User Info */
+.user-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 0.5px solid #d5d5d5;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: auto;
+  height: auto;
+  min-height: 70px;
+  transition: all 0.3s ease;
+}
+
+.user-box.collapsed-user {
+  justify-content: center;
+  padding: 0px 8px;
+  width: 45px;
+  height: 45px;
+  margin: auto auto 0 auto;
+}
+
+.user-initials {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: 0.5px solid #d5d5d5;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: margin 0.3s ease;
+}
+
+.user-box.collapsed-user .user-initials {
+  margin-right: 0;
+}
+
+.user-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.user-name {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-email {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-icon {
+  height: 28px;
+  width: 28px;
+  margin-left: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  margin-left: 280px;
+  padding: 0px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.collapsed-content {
+  margin-left: 80px;
+}
+
+.white-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Antd Drawer Customization */
+.mobile-drawer .ant-drawer-body {
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.mobile-drawer .ant-drawer-content {
+  background-color: #ffffff;
+}
+
+/* Tablet styles (768px to 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .desktop-sidebar {
+    width: 280px;
+  }
+  
+  .desktop-sidebar.collapsed {
+    width: 70px;
+  }
+  
+  .main-content {
+    margin-left: 280px;
+    padding: 20px;
+  }
+  
+  .main-content.collapsed-content {
+    margin-left: 70px;
+  }
+  
+  .menu-item {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .menu-item.collapsed-item {
+    width: 42px;
+    padding: 10px 6px;
+  }
+  
+  .menu-item .menu-icon-left {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: 65px;
+  }
+  
+  .user-box.collapsed-user {
+    width: 54px;
+  }
+}
+
+/* Mobile styles (767px and below) */
+@media screen and (max-width: 767px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .desktop-sidebar {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+    padding-top: 60px;
+  }
+  
+  .main-content.collapsed-content {
+    margin-left: 0;
+  }
+  
+  /* Mobile drawer content styles */
+  .mobile-drawer .sidebar-content {
+    padding: 16px;
+  }
+  
+  .mobile-drawer .menu-item {
+    font-size: 14px;
+    padding: 10px 8px;
+    margin-bottom: 6px;
+  }
+  
+  .mobile-drawer .menu-item .menu-icon-left {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+  }
+  
+  .mobile-drawer .logo-container {
+    margin-bottom: 16px;
+  }
+  
+  .mobile-drawer .logo-img {
+    height: 32px;
+    width: 52px;
+  }
+  
+  .mobile-drawer .separator {
+    margin: 12px 0;
+  }
+  
+  .mobile-drawer .user-box {
+    padding: 8px;
+    min-height: 50px;
+    border: 0.5px solid #d5d5d5;
+  }
+  
+  .mobile-drawer .user-initials {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+    margin-right: 8px;
+  }
+  
+  .mobile-drawer .user-name {
+    font-size: 12px;
+  }
+  
+  .mobile-drawer .user-email {
+    font-size: 10px;
+  }
+  
+  .mobile-drawer .logout-icon {
+    height: 20px;
+    width: 20px;
+    margin-left: 6px;
+  }
+}
+
+/* Small mobile styles (480px and below) */
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+    padding-top: 55px;
+  }
+  
+  .mobile-menu-btn {
+    padding: 10px;
+    top: 12px;
+    left: 12px;
+  }
+  
+  .mobile-menu-btn img {
+    height: 18px;
+    width: 18px;
+  }
+  
+  .mobile-drawer .sidebar-content {
+    padding: 12px;
+  }
+  
+  .mobile-drawer .menu-item {
+    font-size: 13px;
+    padding: 8px 6px;
+    margin-bottom: 4px;
+  }
+  
+  .mobile-drawer .menu-item .menu-icon-left {
+    height: 18px;
+    width: 18px;
+    margin-right: 6px;
+  }
+  
+  .mobile-drawer .logo-img {
+    height: 28px;
+    width: 45px;
+  }
+  
+  .mobile-drawer .user-box {
+    padding: 6px;
+    min-height: 45px;
+  }
+  
+  .mobile-drawer .user-initials {
+    width: 28px;
+    height: 28px;
+    font-size: 9px;
+    margin-right: 6px;
+  }
+  
+  .mobile-drawer .user-name {
+    font-size: 11px;
+  }
+  
+  .mobile-drawer .user-email {
+    font-size: 9px;
+  }
+  
+  .mobile-drawer .logout-icon {
+    height: 18px;
+    width: 18px;
+    margin-left: 4px;
+  }
+}
+
+/* Extra small mobile styles (360px and below) */
+@media screen and (max-width: 360px) {
+  .main-content {
+    padding: 10px;
+    padding-top: 50px;
+  }
+  
+  .mobile-menu-btn {
+    padding: 8px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .mobile-menu-btn img {
+    height: 16px;
+    width: 16px;
+  }
+  
+  .mobile-drawer .sidebar-content {
+    padding: 10px;
+  }
+  
+  .mobile-drawer .menu-item {
+    font-size: 12px;
+    padding: 6px 4px;
+    margin-bottom: 3px;
+  }
+  
+  .mobile-drawer .menu-item .menu-icon-left {
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+  }
+  
+  .mobile-drawer .logo-img {
+    height: 24px;
+    width: 39px;
+  }
+  
+  .mobile-drawer .user-box {
+    padding: 5px;
+    min-height: 40px;
+  }
+  
+  .mobile-drawer .user-initials {
+    width: 24px;
+    height: 24px;
+    font-size: 8px;
+    margin-right: 5px;
+  }
+  
+  .mobile-drawer .user-name {
+    font-size: 10px;
+  }
+  
+  .mobile-drawer .user-email {
+    font-size: 8px;
+  }
+  
+  .mobile-drawer .logout-icon {
+    height: 16px;
+    width: 16px;
+    margin-left: 3px;
+  }
+}
+.logout-icon:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
