@@ -47,7 +47,12 @@ async function authContext(req: Request) {
   if (!authorization) return null;
 
   const userClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-    global: { headers: { authorization } },
+    global: {
+      headers: {
+        Authorization: authorization,
+        apikey: SUPABASE_ANON_KEY,
+      },
+    },
     auth: { persistSession: false },
   });
 
